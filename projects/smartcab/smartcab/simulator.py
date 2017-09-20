@@ -11,6 +11,8 @@ import random
 import importlib
 import csv
 
+print os.getcwd()
+
 class Simulator(object):
     """Simulates agents in a dynamic smartcab environment.
 

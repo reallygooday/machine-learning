@@ -158,6 +158,7 @@ def run():
     # Create the driving agent
     # Flags:
     #   learning   - set to True to force the driving agent to use Q-learning
+    learning = False
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
     agent = env.create_agent(LearningAgent)
@@ -175,6 +176,7 @@ def run():
     #   update_delay - continuous time (in seconds) between actions, default is 2.0 seconds
     update_delay = 0.01
     #   display      - set to False to disable the GUI if PyGame is enabled
+    display = False
     #   log_metrics  - set to True to log trial and simulation results to /logs
     log_metrics = True
     #   optimized    - set to True to change the default log file name
