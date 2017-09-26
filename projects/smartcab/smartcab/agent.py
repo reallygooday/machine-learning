@@ -169,7 +169,7 @@ def run():
     # Flags:
     #   enforce_deadline - set to True to enforce a deadline metric
     enforce_deadline = True
-    env.set_primary_agent(agent)
+    env.set_primary_agent(agent, enforce_deadline = True)
 
     ##############
     # Create the simulation
@@ -181,7 +181,7 @@ def run():
     #   log_metrics  - set to True to log trial and simulation results to /logs
     log_metrics = True
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env)
+    sim = Simulator(env, update_delay = 0.01, log_metrics = True, display = False)
     
     ##############
     # Run the simulator
