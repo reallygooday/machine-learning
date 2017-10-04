@@ -62,7 +62,7 @@ class LearningAgent(Agent):
         # With the hand-engineered features, this learning process gets entirely negated.
         
         # Set 'state' as a tuple of relevant data for the agent        
-        state = None
+        state = (waypoint, inputs['light'], inputs['oncoming'])
 
         return state
 
@@ -177,11 +177,11 @@ def run():
     #   update_delay - continuous time (in seconds) between actions, default is 2.0 seconds
     update_delay = 0.01
     #   display      - set to False to disable the GUI if PyGame is enabled
-    display = False
+    display = True
     #   log_metrics  - set to True to log trial and simulation results to /logs
     log_metrics = True
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay = 0.01, log_metrics = True, display = False)
+    sim = Simulator(env, update_delay = 0.01, log_metrics = True, display = True)
     
     ##############
     # Run the simulator
